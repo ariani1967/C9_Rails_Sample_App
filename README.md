@@ -11,3 +11,8 @@
 ეშვება ამ ფაილის გარეშე:
 
 config/initializers/secret_token.rb  Динамическая генерация секретного токена. 
+
+##To run a Rails application:
+
+rails s -b $IP -p $PORT
+
