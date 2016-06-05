@@ -12,7 +12,16 @@
 
 config/initializers/secret_token.rb  Динамическая генерация секретного токена. 
 
-##To run a Rails application:
+## To run a Rails application:
 
 rails s -b $IP -p $PORT
 
+## ყოველთვის:
+
+git commit -a -m "Add precompiled ......"
+
+git push
+
+git push heroku
+
+heroku run rake db:migrate
