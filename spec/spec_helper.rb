@@ -38,5 +38,9 @@ RSpec.configure do |config|
   # order dependency and want to debug it, you can fix the order by providing
   # the seed, which is printed after each run.
   #     --seed 1234
+  # config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  # config.use_transactional_fixtures = true
+  # config.infer_base_class_for_anonymous_controllers = false
   config.order = "random"
+  config.include Capybara::DSL
 end

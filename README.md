@@ -209,3 +209,50 @@ spec/requests/static_pages_spec.rb ფაილში შესაძლოა �
   let(:base_title) { "Ruby on Rails Tutorial Sample App" }  
 
 და იმავე ფაილში გრძელი ტექსტი შეიძლება გადაკეთდეს #{base_title}   
+<<<<<<< HEAD
+=======
+
+>>>>>>> static-pages
+
+## Глава 4
+### Rails — приправленный Ruby
+
+#### 4.1 Причины
+
+ვისწავლეთ ჰელპერის წერა: app/helpers/application_helper.rb - ფაილში ჩავწერეთ:   
+
+```
+module ApplicationHelper
+
+  # Returns the full title on a per-page basis.
+  def full_title(page_title)
+    base_title = "Ruby on Rails Tutorial Sample App"
+    if page_title.empty?
+      base_title
+    else
+      "#{base_title} | #{page_title}"
+    end
+  end
+end
+```
+
+თუ არგუმენტი page_title ცარიელია , ჰელპერი აბრუნებს საბაზო დასახელებას (base_title), თუ  
+არადა საბაზოს გააერთიანებს არგუმენტთან( page_title) და ისე აბრუნებს. 
+
+ამის შემდეგ შაბლონში ამ სტრიქონს:  
+<title>Ruby on Rails Tutorial Sample App | <%= yield(:title) %></title>  
+
+შევცვლით ამით:  
+<title><%= full_title(yield(:title)) %></title>  
+
+
+#### 4.2 Строки и методы
+
+
+Ctrl-C - თუ დაეკიდა :)  ან  
+Ctrl-D - თუ გვინდა გამოსვლა კონსოლიდან
+
+
+#### 4.2.1 Комментарии
+
+კომენტარები "რეშოტკით" იწყება
